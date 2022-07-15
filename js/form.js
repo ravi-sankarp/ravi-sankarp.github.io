@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var reg = $("#contact-form");
+   
     function submitMessage() {
         $('#contact-submit span').text('Sending ');
         $('#contact-submit i').removeClass('fas fa-arrow-right').addClass('fas fa-spinner');
@@ -17,7 +17,7 @@ $(document).ready(function () {
     function refreshPage() {
         window.location.reload();
     }
-
+    var reg = $("#contact-form");
     reg.validate({
         rules: {
             Username: {
