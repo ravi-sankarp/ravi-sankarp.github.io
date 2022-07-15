@@ -9,6 +9,9 @@ $(document).ready(function () {
     function submitSuccessMessage() {
         $('#contact-submit span').text('Sent');
         $('#contact-submit i').removeClass('fas fa-spinner').addClass('fas fa-check');
+        $('.modal-form-success').css("display", "block");
+        $('.modal-inner').css("pointer-events", "all");
+        $('#modal-btn').click(refreshPage);
 
     };
     function refreshPage() {
@@ -51,22 +54,13 @@ $(document).ready(function () {
 
         submitHandler: function (form) {
 
-            // $('#contact-submit').html('Sending....');
-            // $('#contact-submit span').text('Sending ');
-            // $('#contact-submit i').removeClass('fas fa-arrow-right').addClass('fas fa-spinner-third');
             submitMessage();
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbw5OJia2h0FUS4lUz4OOXyDyc5WgdXZbWbg45V98ILlQYSGuP9vu0DMQ4zmi5kRGjPB/exec",
                 data: $("#contact-form").serialize(),
                 method: "post",
                 success: function (response) {
-                    // $('#contact-submit').html('Sent');
                     submitSuccessMessage();
-                    $('.modal-form-success').css("display", "block");
-                    $('#modal-btn').click(refreshPage);
-
-
-
                     // alert("Form submitted successfully");
                     // console.log("sent");
                     // window.location.href = "index.html";

@@ -2226,7 +2226,7 @@ ul.countdown li p.timeRefSeconds {
 }
 
 .modal-inner {
-    pointer-events: all;
+    pointer-events: none;
     position: absolute;
     top: 50% !important;
     left: 50% !important;
