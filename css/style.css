@@ -16,6 +16,10 @@
     background-color: #777777bc;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 #preloader {
     position: fixed;
     left: 0;
@@ -1292,19 +1296,26 @@ a:active {
     position: relative;
     overflow: hidden
 }
-.blog .item .post-img img{
-    height: 15rem;
-    object-fit: cover;
+
+.blog-full-content {
+
+    transition: ease all 0.35s;
 }
 
-.blog .item .post-img:hover img {
+.blog-full-content:hover {
+    transform: translateY(-5px);
+}
+
+/* .blog .item .post-img:hover img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%)
-}
+} */
 
 .blog .item .post-img img {
     width: 100%;
     -webkit-filter: none;
+    height: 15rem;
+    object-fit: cover;
     filter: none;
     transition: 0.3s
 }
@@ -2224,6 +2235,11 @@ ul.countdown li p.timeRefSeconds {
     background-color: #fff;
     transform: translate(-50%, -50%) !important;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.fa-spinner {
+    animation: loader-rotate 2s linear infinite;
+    transform: rotate(360deg);
 }
 
 /* #sourceMappingURL=style.css.map */
