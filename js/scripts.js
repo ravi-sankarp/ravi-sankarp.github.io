@@ -48,18 +48,12 @@ $(function () {
     var bodyScroll = wind.scrollTop(),
       navbar = $(".navbar"),
       navbloglogo = $(".blog-nav .logo> img"),
-    //   darkbg = $(".bg-black .logo> img"),
-    //   whitebg = $(".bg-white .logo> img"),
-    //   scrollbg = $(".bg-black-scroll .logo> img"), 
     lightbg = $(".bg-light-gray .logo> img"),
       logo = $(".navbar .logo> img");
     if (bodyScroll > 100) {
       navbar.addClass("nav-scroll");
       logo.attr("src", "img/RS_logo.png");
       lightbg.attr("src", "img/RS_logo.png");
-    //   darkbg.attr("src", "img/logo-light.png");
-    //   whitebg.attr("src", "img/logo-dark.png");
-    //   scrollbg.attr("src", "img/logo-light.png");
     } else {
       navbar.removeClass("nav-scroll");
       logo.attr("src", "img/RS_logo.png");
@@ -73,37 +67,6 @@ $(function () {
       $(".navbar-collapse.show").removeClass("show");
     });
   }
-  // wind.on("scroll", function () {
-  //   $(".skills-progress span").each(function () {
-  //     var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-  //     var bottom_of_window = $(window).scrollTop() + $(window).height();
-  //     var myVal = $(this).attr("data-value");
-  //     if (bottom_of_window > bottom_of_object) {
-  //       $(this).css({ width: myVal });
-  //     }
-  //   });
-  // });
-  // var pageSection = $(".bg-img, section");
-  // pageSection.each(function (indx) {
-  //   if ($(this).attr("data-background")) {
-  //     $(this).css(
-  //       "background-image",
-  //       "url(" + $(this).data("background") + ")"
-  //     );
-  //   }
-  // });
-  // $(".testimonials .owl-carousel").owlCarousel({
-  //   items: 1,
-  //   loop: true,
-  //   margin: 15,
-  //   autoplay: true,
-  //   smartSpeed: 500,
-  // });
-  // $(".gallery").magnificPopup({
-  //   delegate: ".popimg",
-  //   type: "image",
-  //   gallery: { enabled: true },
-  // });
   if ($(".numbers").length !== 0) {
     $(".numbers").appear(function () {
       $(".count").countTo({
@@ -143,16 +106,4 @@ $(function () {
     fullScreenHeight();
   }
   SetResizeContent();
-  // $(document).ready(function () {
-  //   $(".owl-carousel").owlCarousel({
-  //     items: 1,
-  //     loop: true,
-  //     margin: 0,
-  //     autoplay: true,
-  //     smartSpeed: 500,
-  //   });
-  //   if ($(".countdown").length !== 0) {
-  //     $(".countdown").countdown({ date: "01 Jan 2021 00:01:00", format: "on" });
-  //   }
-  // });
 });
