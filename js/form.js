@@ -2,15 +2,16 @@ $(document).ready(function () {
 
    
     function submitMessage() {
-        $('#contact-submit span').text('Sending ');
-        $('#contact-submit i').removeClass('fas fa-arrow-right').addClass('fas fa-spinner');
-
-    };
-    function submitSuccessMessage() {
-        $('#contact-submit span').text('Sent');
-        $('#contact-submit i').removeClass('fas fa-spinner').addClass('fas fa-check');
+        // $('#contact-submit span').text('Sending ');
+        // $('#contact-submit i').removeClass('fas fa-arrow-right').addClass('fas fa-spinner');
         $('.modal-form-success').css("display", "block");
         $('.modal-inner').css("pointer-events", "all");
+        $('#modal-btn').css("display", "none");
+    };
+    function submitSuccessMessage() {
+        $('.modal-para').text('Form submitted successfully');
+        $('.modal-icon').removeClass('fas fa-spinner').addClass('fas fa-check');
+        $('#modal-btn').css("display", "block");
         $('#modal-btn').click(refreshPage);
 
     };
